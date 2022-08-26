@@ -6,6 +6,13 @@ body {
   line-height: 1.6em;
   margin: 0;
 }
+main{
+  padding-top: 6%;
+  background: linear-gradient(45deg,blue,red,green,black);
+  animation: cambiar 10s ease-in-out infinite;
+  background-size: 400% 400%;
+
+}
 h1 {
   font-size: 2rem;
   line-height: 1.3em;
@@ -19,9 +26,17 @@ p {
   margin: 0 auto;
 }
 .header {
-  background: #333;
+  background: lightseagreen;
   color: white;
   padding: 2rem 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+.footer{
+  background: #333;
+  color: white;
+  
 }
 .header a {
   color: white;
@@ -106,4 +121,9 @@ p {
 }
 .cuenta a{
   text-decoration: none;
+}
+@keyframes cambiar{
+  0%{background-position: 0 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0 50%;}
 }
