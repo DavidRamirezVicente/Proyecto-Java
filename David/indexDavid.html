@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navegador">
+      <div class="desplegable">
+        <button class="listbtn">
+          <img
+            class="menu-des"
+            src="https://cdn-icons-png.flaticon.com/512/59/59660.png"
+            alt=""
+          />
+        </button>
+        <div class="elementos-desplegable">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a href="https://medlineplus.gov/spanish/healthtopics.html">Mas informacion</a>
+      <a href="#">Nombre Web</a>
+      <a href="#">About</a>
+      <div class="buscador">
+        <input type="text" placeholder="Search.." />
+        <a href="#">Crear</a>
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+    <main class="main">
+      <!--class="px-20"-->
+      <div class="container">
+      <div style="padding-top: 6%;">
+        <h1 class="text-gray-700 text-4xl">All Questions</h1>
+      </div>
+      <div class="flex justify-end">
+        <a href="formulario.html">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+            Ask a Question
+          </button>
+        </a>
+      </div>
+      <div class="flex justify-end">
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          Newest
+        </button>
+
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          More liked
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          Unanswered
+        </button>
+      </div>
+    </div>
+    </main>
+
+</body>
+
+</html>
