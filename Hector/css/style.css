@@ -1,43 +1,60 @@
 /* Estilo del navegador */
+html{
+  height: 100%;
+}
 body {
   font-family: georgia, times, serif;
   color: #333;
   font-size: 1.2rem;
   line-height: 1.6em;
   margin: 0;
+  min-height: 100%;
 }
 main{
   padding-top: 6%;
   background: linear-gradient(45deg,blue,red,green,black);
   animation: cambiar 10s ease-in-out infinite;
   background-size: 400% 400%;
-
+  
 }
 h1 {
   font-size: 2rem;
   line-height: 1.3em;
   text-align: center;
+  border: solid;
+  
+  width: 85%;
+  max-width: 850px;
+  margin: 25px auto;
 }
 p {
-  margin-bottom: 1.6em;
+  
+  border: solid;
+  color: white;
 }
 .container {
   width: 85%;
   max-width: 850px;
   margin: 0 auto;
+  border-left: solid;
+  border-right: solid;
+  
 }
 .header {
   background: lightseagreen;
   color: white;
-  padding: 2rem 0;
   top: 0;
   position: fixed;
   width: 100%;
+  
 }
 .footer{
   background: #333;
   color: white;
-  
+bottom: 0;
+
+
+
 }
 .header a {
   color: white;
@@ -47,6 +64,7 @@ p {
 .navegador{
   display: flex;
   justify-content: space-between;
+    
 }
 
 
@@ -106,6 +124,10 @@ p {
 .desplegable:hover .elementos-desplegable {
   display: block;
 }
+.home{
+  width: 30px;
+    height: 30px;
+}
 .menu-des{
   width: 30px;
   height: 30px;
@@ -140,11 +162,14 @@ p {
 }
 
 .cuenta{
+  
   text-align: center;
 }
 .cuenta a{
+  color: white;
   text-decoration: none;
 }
+
 @keyframes cambiar{
   0%{background-position: 0 50%;}
   50%{background-position: 100% 50%;}

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/buscador.css">
+    <script src="js/jquery.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
   </head>
   <body>
     <!-- Elementos Navegador-->
@@ -20,7 +23,7 @@
             />
           </button>
           <div class="elementos-desplegable">
-            <a href="#">Link 1</a>
+            <a href="indexDavid.html">Preguntas</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
@@ -31,27 +34,49 @@
         <a href="#">Nombre Web</a>
         <a href="#">About</a>
         <div class="buscador">
-          <input type="text" placeholder="Search.." />
-          <a href="#">Crear</a>
+          <input type="search" placeholder="Buscar . . ." id="inputBusqueda">
+          <div class="search" id="search">
+          <table class="search-table" id="searchTable">
+            <thead>
+              <tr>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="ejercicio.html">Ejercicio</a></td>
+              </tr>
+              <tr>
+                <td><a href="Alimentacion.html">Alimentacion</a></td>
+              </tr>
+              
+              <tr>
+                <td><a href="#">Noticias</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          <a href="registro.html">Crear</a>
           <a href="login.html">Login</a>
         </div>
       </nav>
     </header>
 
     <main class="main">
+      <h1>
+        Encuentra las mejores respuestas para tus preguntas y ayuda a los
+        demas
+      </h1>
       <div class="container">
-        <h1>
-          Encuentra las mejores respuestas para tus preguntas y ayuda a los
-          demas
-        </h1>
+        
         <div class="bubble">
           <p>hola</p>
           <div class="cuenta">
             <a href="crear">Unete a la comunidad</a>
-            <a href="buscar">Busca contenido</a>
+            <a href="indexDavid.html">Busca contenido</a>
           </div>
         </div>
-
+        
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa
           pariatur voluptates porro totam quo suscipit quidem quae doloremque,
@@ -63,54 +88,7 @@
           voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
           tenetur nihil.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-          voluptates voluptas, minima tempore autem quo debitis culpa eaque quia
-          tenetur nihil.
-        </p>
+        
       </div>
     </main>
     <footer class="footer">
@@ -123,5 +101,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/buscador.js"></script>
   </body>
 </html>
