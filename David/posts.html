@@ -23,7 +23,7 @@
                 </ul>
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-            <div class="brand">My Forum</div>
+            <div class="brand">Ask4Help</div>
         </div>
         <!--SearchBox Section-->
         <div class="search-box">
@@ -37,115 +37,199 @@
                 <button><i class="fa fa-search"></i></button>
             </div>
         </div>
+    </header>
     <div class="container">
         <!--Navigation-->
         <div class="navigate">
-            <span><a href="">MyForum - Forums</a> >> <a href="">random subforum</a> >> <a href="">random topic</a></span>
+            <span><a href="">Ask4Help - Forums</a> >> <a href="">subforum</a></span>
         </div>
-
-        <!--Topic Section-->
-        <div class="topic-container">
-            <!--Original thread-->
-            <div class="head">
-                <div class="authors">Author</div>
-                <div class="content">Topic: random topic (Read 1325 Times)</div>
+        <!--Display posts table-->
+        <div class="posts-table">
+            <div class="table-head">
+                <div class="status">Status</div>
+                <div class="subjects">Subjects</div>
+                <div class="replies">Replies/Views</div>
+                <div class="last-reply">Last Reply</div>
             </div>
-
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <div>Role</div>
-                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
-                    <div>Posts: <u>45</u></div>
-                    <div>Points: <u>4586</u></div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
                 </div>
-                <div class="content">
-                    Just a random content of a random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <hr>
-                    Regards username
-                    <br>
-                    <div class="comment">
-                        <button onclick="showComment()">Comment</button>
-                    </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
                 </div>
             </div>
-        </div>
-
-        <!--Comment Area-->
-        <div class="comment-area hide" id="comment-area">
-            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-        <!--Comments Section-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">AnotherUser</a></div>
-                    <div>Role</div>
-                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
-                    <div>Posts: <u>455</u></div>
-                    <div>Points: <u>4586</u></div>
+            <!--starts here-->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
                 </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
                 </div>
             </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
 
-
-        <!--Another Comment With replies-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">AnotherUser</a></div>
-                    <div>Role</div>
-                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
-                    <div>Posts: <u>455</u></div>
-                    <div>Points: <u>4586</u></div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
                 </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
                 </div>
             </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
 
-        
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
 
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-lock"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Is learning Python on 2021 worth it?</a>
+                    <br>
+                    <span>Started by <b><a href="">User</a></b> .</span>
+                </div>
+                <div class="replies">
+                    2 replies <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    Oct 12 2021
+                    <br>By <b><a href="">User</a></b>
+                </div>
+            </div>
+            <!--ends here-->
+        </div>
+        <!--Pagination starts-->
+            <div class="pagination">
+                pages: <a href="">1</a><a href="">2</a><a href="">3</a>
+            </div>
+        <!--pagination ends-->
     </div>
-    <footer>
-        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
-    </footer>
+    
     <script src="main.js"></script>
 </body>
 </html>
