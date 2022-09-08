@@ -1,0 +1,28 @@
+Drop database if exists javaProject;
+Create database if not exists javaProject;
+Use javaproject;
+create table if not exists Users(
+	idUser int unsigned auto_increment,
+	Email varchar(50) not null,
+	UserName varchar(20) not null,
+	Passwd varchar(20) not null,
+	primary key (idUser)
+);
+
+
+create table if not exists Questions(
+	idQuestion int unsigned auto_increment,
+	Question Longtext not null,
+	idUser int unsigned,
+	primary key (idQuestion),
+	 FOREIGN KEY (idUser) REFERENCES Users(idUser)
+);
+
+create table if not exists Answers(
+	Answer longtext not null,
+	idQuestion int unsigned,
+	idUser int unsigned,
+    primary key(idQuestion,idUser),
+	FOREIGN KEY (idUser) REFERENCES Users(idUser),
+	FOREIGN KEY (idQuestion) REFERENCES Questions(idQuestion)
+);
