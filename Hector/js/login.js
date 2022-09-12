@@ -2,23 +2,23 @@ document.getElementById("login").addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   // console.log(email);
-  const password = document.getElementById("password").value;
+  const pass = document.getElementById("pass").value;
   // console.log(password);
-  login(email, password);
+  login(email, pass);
 });
-let email;
+
 // session_start();
 //         $_SESSION["email"] = email;
 //         document.cookie = "loging=" + true;
-async function login(email, password){
+async function login(email, pass){
       // var email = 'hectorgomez2312@gmail.com';
       // var password = 'root';
       // encode to scape spaces
       const esc = encodeURIComponent;
-      const url = 'http://localhost:8080/login?';
+      const url = 'http://localhost:8080/users/login?';
       const params = { 
           "email": email,
-          "password": password
+          "pass": pass
       };
       // this line takes the params object and builds the query string
       const query = Object.keys(params).map(k => `${esc(k)}=${esc(params[k])}`).join('&')
@@ -45,6 +45,5 @@ async function login(email, password){
 
 
  
-
 
 
