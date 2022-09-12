@@ -3,6 +3,11 @@ package com.copyflow.aplication.model;
 
 public class User {
 	
+	private int id;
+	private String nombre;
+	private String email;
+	private String password;
+	private String preguntas;
 	
 	public int getId() {
 		return id;
@@ -34,11 +39,6 @@ public class User {
 	public void setPreguntas(String preguntas) {
 		this.preguntas = preguntas;
 	}
-	private int id;
-	private String nombre;
-	private String email;
-	private String password;
-	private String preguntas;
 	
 	
 }
