@@ -35,7 +35,7 @@ async function login(email, pass){
         //document.cookie = "login=" + email;
         let x = document.cookie;
         console.log(x);
-        location.href="../index.html";
+        location.href="index.html";
         alert("Conectado correctamente");
       } else {
         alert("Datos erroneos");

@@ -15,7 +15,7 @@ function sesion()
 }
 function cerrar_sesion(){
     document.cookie = "login=false";
-    location.href="../index.html";
+    location.href="index.html";
     
 }
  sesion();
