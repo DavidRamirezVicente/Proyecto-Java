@@ -30,7 +30,7 @@ async function login(email, pass){
         }});
       const LoginUser = await res.json();
       console.log(LoginUser);
-      if (LoginUser==true) {
+      if (LoginUser!="") {
         document.cookie = "login=true";
         //document.cookie = "login=" + email;
         let x = document.cookie;

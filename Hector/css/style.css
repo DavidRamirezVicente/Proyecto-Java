@@ -12,7 +12,7 @@ body {
 }
 main{
   padding-top: 6%;
-  background: linear-gradient(45deg,blue,violet,green,red);
+  background: linear-gradient(45deg,blue,red,green,black);
   animation: cambiar 10s ease-in-out infinite;
   background-size: 400% 400%;
   
