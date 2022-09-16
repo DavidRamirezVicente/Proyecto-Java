@@ -12,7 +12,7 @@ public List<Question> findAllQuestions();
 
 	public Optional<Question> findQuestionById(Long id);
 
-	
+	public List<Question>findByCategory(String category);
 
 	public Question saveQuestion(Question questionNew);
 

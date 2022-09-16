@@ -11,7 +11,7 @@ public interface QuestionsController {
 
 	public Optional<Question> getQuestionById(Long id);
 
-
+	public List<Question>findByCategory(String category);
 	
 	public Question addQuestion(Question question);
 

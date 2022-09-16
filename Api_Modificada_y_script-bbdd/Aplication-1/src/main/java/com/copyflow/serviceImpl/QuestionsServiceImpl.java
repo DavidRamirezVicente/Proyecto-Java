@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.copyflow.entities.Question;
-import com.copyflow.entities.User;
 import com.copyflow.repository.QuestionRepository;
 import com.copyflow.service.QuestionsService;
 
@@ -59,6 +58,12 @@ public class QuestionsServiceImpl implements QuestionsService {
 			return "Pregunta modificada";
 		}
 		return "Error al modificar el Customer";
+	}
+
+	@Override
+	public List<Question> findByCategory(String category) {
+		List<Question> categoria = questionRepository.findByCategory(category);
+		return categoria;
 	}
 
 }

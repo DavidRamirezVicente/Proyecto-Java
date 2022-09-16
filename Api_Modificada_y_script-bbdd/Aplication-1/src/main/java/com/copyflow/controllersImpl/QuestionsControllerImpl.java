@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.copyflow.controllers.QuestionsController;
@@ -30,7 +31,8 @@ public class QuestionsControllerImpl implements QuestionsController {
 	}
 
 	@Override
-	@RequestMapping(value = "/questions/{id}", method = RequestMethod.GET, produces = "application/json")
+	@GetMapping("/questions/{id}")
+	
 	public Optional<Question> getQuestionById(@PathVariable Long id) {
 		// TODO Auto-generated method stub
 		return questionService.findQuestionById(id);
@@ -55,6 +57,13 @@ public class QuestionsControllerImpl implements QuestionsController {
 	public String updateQuestion(Question questionNew) {
 		// TODO Auto-generated method stub
 		return questionService.updateQuestion(questionNew);
+	}
+
+	@Override
+	@GetMapping("/questions/category/{category}")
+	public List<Question> findByCategory(@PathVariable String category) {
+		// TODO Auto-generated method stub
+		return questionService.findByCategory(category);
 	}
 
 

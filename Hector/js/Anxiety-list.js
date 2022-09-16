@@ -1,15 +1,17 @@
-let url = 'http://localhost:8080/questions';
-        fetch(url)
-            .then( response => response.json() )
-            .then( data => mostrarData(data) )
-            .catch( error => console.log(error) )
+async function listquestions() {
+    const response = await fetch('http://localhost:8080/questions/category/Anxiety');
+    const data = await response.json();
+    return data;
+  }
 
-        const mostrarData = (data) => {
-            console.log(data)
+  var variable1;
+  listquestions().then(data => {
+    console.log(data)
             let body = ""
+
             for (var i = 0; i < data.length; i++) { 
-                   
-                
+            
+              
                body+=`
                <div class="body">
                 <div class="authors">
@@ -28,18 +30,21 @@ let url = 'http://localhost:8080/questions';
                 </div>
                 
             </div>
-            <div class="comment">
-                        hola
-                    </div>
+           
             <div class="comment-area hide" id="comment-area">
             <textarea name="comment" id="" placeholder="comment here ... "></textarea>
             <input type="submit" value="submit">
         </div>
             
               `
+             
             }
+           
             document.getElementById('data').innerHTML = body
-            //console.log(body)
-        }
+            
+    
+    //console.log(movies); // fetched movies
+  });
+
        
   
