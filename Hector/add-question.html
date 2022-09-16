@@ -9,23 +9,26 @@
 </head>
 
 <body>
-    <table width="90%" border="0" cellspacing="2" cellpadding="2">
-        <form name="Preguntas" method="POST">
+    <form id="preguntas" method="POST">
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" name="category" placeholder="Ingrese categoria" required="">
+        </div>
+              
             <div class="mb-3">
-                <label for="Categoria" class="form-label">Categoria</label>
-                <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria" required="">
-            </div>
-                  
-                <div class="mb-3">
-                <label for="Pregunta" class="form-label">Pregunta</label>
-                <input type="text" class="form-control" id="pregunta" name="pregunta" placeholder="Pregunta" required="">
-            </div>
+            <label for="question" class="form-label">Pregunta</label>
+            <input type="text" class="form-control" id="question" name="question" placeholder="Ingrese la pregunta" required="">
+        </div>
 
-            
+        <div class="mb-3">
+            <label for="iduser" class="form-label">IdUser</label>
+            <input type="text" class="form-control" id="iduser" name="iduser" placeholder="Ingrese iduser" required="">
+        </div>
 
-            <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Añadir</button>
-        </form>
-    </table>
+        <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+
+    </form>
     <script src="js/preguntas.js"></script>
 </body>
 

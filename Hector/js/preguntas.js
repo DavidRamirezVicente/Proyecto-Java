@@ -1,33 +1,37 @@
 document.getElementById("preguntas").addEventListener("submit", (e) => {
     e.preventDefault();
-    const categoria = document.getElementById("categoria").value;
-    console.log(categoria);
-    const pregunta = document.getElementById("pregunta").value;
-    console.log(pregunta);
-
-    preguntas(categoria, pregunta);
-  
+    const category = document.getElementById("category").value;
+    console.log(category);
+    const question = document.getElementById("question").value;
+    console.log(question);
+    const iduser = document.getElementById("iduser").value;
+    console.log(iduser);
+    pregunta(category, question, iduser);
   });
   
-  function preguntas(categoria, pregunta) {
-      const url = 'http://localhost:8080/questions';
-      const params = {
-          headers: {
-              'Accept': "application/json, text/plain, */*",
-              'Content-Type': "application/json;charset=utf-8"
-          },
-          body: JSON.stringify({
-              "categoria": categoria,
-              "pregunta": pregunta
-          }),
-          method: "POST"
-      };
+  function pregunta(category, question, iduser) {
+    
   
-      alert(1);
-  fetch(url, params)
-      .then(data => { console.log('data', data)})
-      .then(res => { console.log('res', res) })
-      .catch(error => { console.log('error', error) });
-   
+    alert(1);
+  fetch('http://localhost:8080/questions/add',{
+    method:"POST",
+    headers: {
+      'Accept': "application/json, text/plain, */*",
+      'Content-Type': "application/json;charset=utf-8"
+  },
+  body: JSON.stringify(
+    {
+    "category": category,
+    "question": question,
+    "iduser": iduser
   }
+  )
+  })
+  .then(res => res.json())
+  .then(data => console.log(data))
+  
+  }
+  
+    
+  
   
