@@ -26,10 +26,20 @@ let url = 'http://localhost:8080/questions';
                         <button onclick="showComment()">Comment</button>
                     </div>
                 </div>
+                
             </div>
+            <div class="comment">
+                        hola
+                    </div>
+            <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+            
               `
             }
             document.getElementById('data').innerHTML = body
             //console.log(body)
         }
+       
   

@@ -5,13 +5,17 @@
 //Comment
 function showComment(){
     var commentArea = document.getElementById("comment-area");
-    commentArea.classList.remove("hide");
+    
 }
 
 //Reply
 function showReply(){
     var replyArea = document.getElementById("reply-area");
     replyArea.classList.remove("hide");
+}
+function showReply(){
+    var replyArea2 = document.getElementById("reply-area2");
+    replyArea2.classList.remove("hide");
 }
 
 //NavBar
@@ -32,6 +36,11 @@ function showIconBar(){
 //Comment
 function showComment(){
     var commentArea = document.getElementById("comment-area");
+    commentArea.classList.remove("hide");
+}
+
+function showComment(){
+    var commentArea = document.getElementById("comment-area2");
     commentArea.classList.remove("hide");
 }
 

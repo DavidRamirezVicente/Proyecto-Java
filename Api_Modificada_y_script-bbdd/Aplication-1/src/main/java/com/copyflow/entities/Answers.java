@@ -11,19 +11,21 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "USERNAME")
+@Table(name = "ANSWERS")
 @Getter
 @Setter
-public class User {
-		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		@Column(name="IDUSER")
-		Long iduser;
-		@Column(name="EMAIL")
-		String email;
-		@Column(name="USERNAME")
-		String username;
-		@Column(name="PASS")
-		String pass;
-		
-}
+public class Answers {
+
+
+			@Id
+			@GeneratedValue(strategy = GenerationType.IDENTITY)
+			@Column(name="IDQUESTION")
+			Long idquestion;
+			@Column(name="ANSWER")
+			String answer;
+			
+			@Column(name="IDUSER")
+			Long iduser;
+			
+	}
+

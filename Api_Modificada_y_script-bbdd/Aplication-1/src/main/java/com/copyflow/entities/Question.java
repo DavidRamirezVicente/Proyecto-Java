@@ -9,21 +9,22 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
-
 @Entity
-@Table(name = "USERNAME")
+@Table(name = "QUESTION")
 @Getter
 @Setter
-public class User {
-		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		@Column(name="IDUSER")
-		Long iduser;
-		@Column(name="EMAIL")
-		String email;
-		@Column(name="USERNAME")
-		String username;
-		@Column(name="PASS")
-		String pass;
-		
+public class Question {
+	
+			@Id
+			@GeneratedValue(strategy = GenerationType.IDENTITY)
+			@Column(name="IDQUESTION")
+			Long idquestion;
+			@Column(name="QUESTION")
+			String question;
+			@Column(name="CATEGORY")
+			String category;
+			@Column(name="IDUSER")
+			Long iduser;
+			
+	
 }
