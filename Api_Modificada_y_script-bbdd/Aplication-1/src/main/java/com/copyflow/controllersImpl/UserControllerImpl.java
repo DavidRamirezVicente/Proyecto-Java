@@ -34,7 +34,8 @@ public class UserControllerImpl implements UserController{
 
 	// http://localhost:8888/customers/1 (GET)
 	@Override
-	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET, produces = "application/json")
+	@GetMapping("/users/{id}")
+	
 	public Optional<User> getUserById(@PathVariable Long id) {
 		return userService.findUserById(id);
 	}

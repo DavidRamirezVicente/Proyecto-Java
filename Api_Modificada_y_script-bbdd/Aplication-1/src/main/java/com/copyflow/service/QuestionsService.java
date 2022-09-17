@@ -19,4 +19,6 @@ public List<Question> findAllQuestions();
 	public String deleteQuestion(Long id);
 
 	public String updateQuestion(Question questionNew);
+	
+	
 }

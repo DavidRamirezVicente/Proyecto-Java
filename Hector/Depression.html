@@ -1,145 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forum</title>
-    <link rel="stylesheet" href="css/questions.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
-    
-</head>
+    <link rel="stylesheet" href="css/questions.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <!--NavBar Section-->
-        <nav class="navegador">
-            <div class="desplegable">
-                <div class="button">
-                    <button class="button-63" role="button">
-                       <a href="add-question.html">Ask a question</a> </button>
-                </div>
-              <div class="elementos-desplegable">
-                <a href="forum.html">Forums</a>
+      <!--NavBar Section-->
+      <nav class="navegador">
+        <div class="desplegable">
+          <button class="listbtn">
+            <a class="bar-icon" id="iconBar"><i class="fa fa-bars"></i></a>
+          </button>
+          <div class="elementos-desplegable">
+            <a href="forum.html">Forums</a>
             <a href="detail.html">Detail</a>
             <a href="index.html">Inicio</a>
-              </div>
-            </div>
-            
-            <div class="brand">Ask4Help</div>
-          </nav>
-        <!--SearchBox Section-->
-        <div class="search-box">
-            <div>
-                <select name="" id="">
-                    <option value="Everything">Everything</option>
-                    <option value="Topics">Titles</option>
-                </select>
-                <input type="text" name="q" placeholder="search ...">
-                <button><i class="fa fa-search"></i></button>
-            </div>
+          </div>
         </div>
+
+        <div class="brand">Ask4Help</div>
+      </nav>
+      <!--SearchBox Section-->
+      <div class="search-box">
+        <div>
+          <select name="" id="">
+            <option value="Everything">Everything</option>
+            <option value="Topics">Titles</option>
+          </select>
+          <input type="text" name="q" placeholder="search ..." />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+      </div>
     </header>
     <div class="container">
-        <!--Navigation-->
-        <div class="navigate">
-            <span><a href="">Ask4Help - Forums</a> >> <a href="">MENTAL HEALTH</a></span>
-            <div class="button">
-                <button class="button-63" role="button">Ask a question</button>
-            </div>
+      <!--Navigation-->
+      <div class="navigate">
+        <span
+          ><a href="">Ask4Help - Forums</a> >> <a href="">random subforum</a> >>
+          <a href="">random topic</a></span
+        >
+        <div class="button">
+          <button class="button-63" role="button">
+            <a href="add-Depresion.html">Ask a question</a>
+          </button>
         </div>
+      </div>
 
-        <!--Topic Section-->
-        <div class="topic-container">
-            <!--Original thread-->
-            <div class="head">
-                <div class="content">Topic: Depression, Bipolar disorder and other state of mind disorders</div>
-            </div>
-
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png">
-                    </div>
-                <div class="content">
-                    Just a random content of a random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <hr>
-                    Regards username
-                    <br>
-                    <div class="comment">
-                        <button onclick="showComment()">Comment</button>
-                    </div>
-                </div>
-            </div>
+      <!--Topic Section-->
+      <div class="topic-container">
+        <!--Original thread-->
+        <div class="head">
+          <div class="authors">Author</div>
+          <div class="content">Topic: random topic</div>
         </div>
+        <div id="data"></div>
 
+        <h1>Añadir Respuestas</h1>
+        <form id="FormularioDepresion">
+          <input type="text" id="Numquestion" name="" />
+          <input type="text" id="addDepresion" name="" />
+          <button type="submit">Add</button>
+        </form>
+        <h2>Respuestas</h2>
+        <div id="Depresion">
+          <ul id="listasDepresion">
+           
+          </ul>
+        </div>
         <!--Comment Area-->
-        <div class="comment-area hide" id="comment-area">
-            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-        <!--Comments Section-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png" alt="">
-                </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-
-        <!--Another Comment With replies-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png" alt="">
-                </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-        
-
+      </div>
     </div>
-    <script src="main.js"></script>
-</body>
+    <script src="js/main-questions.js"></script>
+    <script src="js/Depresion-list.js"></script>
+
+  </body>
 </html>
+
+

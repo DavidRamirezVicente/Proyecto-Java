@@ -13,9 +13,10 @@ public List<Answers> findAllAnswers();
 	public Optional<Answers> findAnswerById(Long id);
 	
 
-	public Question saveAnswer(Answers AnswerNew);
+	public Answers saveAnswer(Answers AnswerNew);
 
 	public String deleteAnswer(Long id);
 
-	public String updateAnswer(Answers answerNew);
+	public String updateAnswer(Answers answerUpdated);
+	public List<Answers>findByIdquestion(Long idquestion);
 }

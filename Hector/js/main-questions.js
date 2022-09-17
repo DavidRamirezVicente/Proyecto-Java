@@ -5,7 +5,7 @@
 //Comment
 function showComment(){
     var commentArea = document.getElementById("comment-area");
-    
+    replyArea.classList.remove("hide");
 }
 
 //Reply
