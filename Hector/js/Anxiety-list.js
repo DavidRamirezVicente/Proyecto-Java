@@ -14,7 +14,7 @@ listquestions().then((data) => {
     body += `
             <div class="body">
                 <div class="authors">
-                    <div class="username"><a href="">${data[i].iduser}</a></div>
+                    <div class="username"><a href="">${data[i].idquestion}</a></div>
                     <img src="Img/983980.png">
                     </div>
                     <div class="content">
@@ -39,17 +39,19 @@ var formulario= document.getElementById("FormularioRespuesta")
 
 formulario.addEventListener('submit', function(){
     var TituloRespuesta = document.getElementById("addrespuesta").value;
-    if (TituloRespuesta.length >= 1) {
+    var prueba = document.getElementById("numpregunta").value;
+
         //setItem
         localStorage.setItem(TituloRespuesta, TituloRespuesta);
-        
-    } 
+        localStorage.setItem(prueba, prueba);
+ 
 });
-var ul = document.getElementById("listasRespuestas")
+var div = document.getElementById("listasRespuestas")
 for (var i in localStorage) {
 
     if (typeof localStorage[i] == "string") {
         var li = document.createElement("li")
+        
         li.append(localStorage[i])
         ul.append(li)
     }

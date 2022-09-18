@@ -11,4 +11,5 @@ import com.copyflow.entities.User;
 public interface QuestionRepository extends JpaRepository<Question, Long>{
 	void save (Optional<Question> questionToUpdate);
 	List<Question>findByCategory(String category);
+	
 }

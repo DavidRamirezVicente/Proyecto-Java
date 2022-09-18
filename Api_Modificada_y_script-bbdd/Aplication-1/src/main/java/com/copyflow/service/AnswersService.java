@@ -9,7 +9,6 @@ import com.copyflow.entities.Question;
 public interface AnswersService {
 public List<Answers> findAllAnswers();
 	
-
 	public Optional<Answers> findAnswerById(Long id);
 	
 

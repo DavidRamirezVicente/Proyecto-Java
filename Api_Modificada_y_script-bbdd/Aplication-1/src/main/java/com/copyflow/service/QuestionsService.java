@@ -7,6 +7,7 @@ import com.copyflow.entities.Question;
 import com.copyflow.entities.User;
 
 public interface QuestionsService {
+
 public List<Question> findAllQuestions();
 	
 
