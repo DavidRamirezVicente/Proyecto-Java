@@ -1,145 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
-    
-</head>
-
-<body>
-    <header>
-        <!--NavBar Section-->
-        <nav class="navegador">
-            <div class="desplegable">
-                <div class="button">
-                    <button class="button-63" role="button">
-                       <a href="add-question.html">Ask a question</a> </button>
-                </div>
-              <div class="elementos-desplegable">
-                <a href="forum.html">Forums</a>
-            <a href="detail.html">Detail</a>
-            <a href="index.html">Inicio</a>
-              </div>
-            </div>
-            
-            <div class="brand">Ask4Help</div>
-          </nav>
-        <!--SearchBox Section-->
-        <div class="search-box">
-            <div>
-                <select name="" id="">
-                    <option value="Everything">Everything</option>
-                    <option value="Topics">Titles</option>
-                </select>
-                <input type="text" name="q" placeholder="search ...">
-                <button><i class="fa fa-search"></i></button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suplementos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/buscador.css" />
+    <link rel="stylesheet" href="css/questions.css" />
+  </head>
+  <body class="grid-container">
+    <nav class="nav">
+      <div class="desplegable">
+        <a href="index.html">
+          <img
+            class="home"
+            src="data:image/png;base64,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"
+            alt="Home"
+          />
+        </a>
+        <button class="listbtn">
+          <a class="bar-icon" id="iconBar"><i class="fa fa-bars"></i></a>
+        </button>
+        <div class="elementos-desplegable">
+          <a href="forum.html">Forums</a>
+          <a href="detail.html">Detail</a>
+          <a href="index.html">Inicio</a>
         </div>
-        </header>
+        <div class="brand">Ask4Help</div>
+      </div>
+
+      <div class="buscador">
+        <input type="search" placeholder="Buscar . . ." id="inputBusqueda" />
+
+        <a href="registro.html">Crear</a>
+          <a id="sesion_btn" onclick="sesion()">Log In</a>
+      </div>
+    </nav>
+
     <div class="container">
+      <div class="search" id="search">
+        <table class="search-table" id="searchTable">
+          <thead>
+            <tr>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="forum.html">Foro</a></td>
+            </tr>
+            <tr>
+              <td><a href="Anxiety.html">Ansiedad</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="Depression.html">Depresion</a></td>
+            </tr>
+            <tr>
+              <td><a href="lose-weight.html">Control de peso</a></td>
+            </tr>
+            <tr>
+              <td><a href="Suplements.html">Suplementos</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <article class="main">
         <!--Navigation-->
         <div class="navigate">
-            <span><a href="">Ask4Help - Forums</a> >> <a href="">PHYSICAL HEALTH</a></span>
-            <div class="button">
-                <button class="button-63" role="button">Ask a question</button>
-            </div>
+          <span
+            ><a href="forum.html">Ask4Help - Forums</a> >>
+            <a href="Suplements.html">Suplementos</a> >> </span
+          >
+          <div class="button">
+            <button class="button-63" role="button">
+              <a href="add-Suplements.html">Añadir pregunta</a>
+            </button>
+          </div>
         </div>
 
         <!--Topic Section-->
         <div class="topic-container">
-            <!--Original thread-->
-            <div class="head">
-                <div class="content">Topic: Suplements</div>
-            </div>
+          <!--Original thread-->
+          <div class="head">
+            <div class="authors">Author</div>
+            <div class="content">Topic: random topic</div>
+          </div>
+          <div id="data"></div>
 
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png">
-                    </div>
-                <div class="content">
-                    Just a random content of a random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <hr>
-                    Regards username
-                    <br>
-                    <div class="comment">
-                        <button onclick="showComment()">Comment</button>
-                    </div>
-                </div>
-            </div>
+          <div class="body">
+            <h2>Respuestas</h2>
+          </div>
+
+          <!--Comment Area-->
         </div>
-
-        <!--Comment Area-->
-        <div class="comment-area hide" id="comment-area">
-            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-        <!--Comments Section-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png" alt="">
-                </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-
-        <!--Another Comment With replies-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="">Username</a></div>
-                    <img src="983980.png" alt="">
-                </div>
-                <div class="content">
-                    Just a comment of the above random topic.
-                    <br>To see how it looks like.
-                    <br><br>
-                    Nothing more and nothing less.
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Reply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
-
-        
-
+      </article>
     </div>
-    <script src="main.js"></script>
-</body>
+
+    <footer class="footer">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        exercitationem id nemo. Vel culpa in voluptates alias fugit? Harum,
+        itaque sit! Assumenda natus ab eligendi dolor perferendis obcaecati
+        doloribus ipsum.
+      </p>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/Suplements-list.js"></script>
+    <script src="js/main-questions.js"></script>
+    <script src="js/sesion.js"></script>
+  </body>
 </html>

@@ -1,28 +1,146 @@
 /* ########################################### */
 /*                 Global                      */
 /* ########################################### */
-*{
-    box-sizing: border-box;
+h1{
+    font-size:16px;
+    font-weight: bolder;
 }
-
+*{
+    
+    margin: 0;
+    padding: 0;
+}
 html{
     background-image:url("../Img/Sublime.jpg");
     font-size: 14px;
     font-family: 'Titillium Web', sans-serif;
     color:#FEFEFE;
+    height: 100%;
 }
-
 a{
+    
     color:#7f048d;
     font-weight: bolder;
     text-decoration: none;
 }
-
-h1{
-    font-size:16px;
-    font-weight: bolder;
+body{
+    min-height: 100%;
+    font-size: 1.2rem;
+  line-height: 1.6em;
 }
 
+.header{
+  grid-area: header;
+}
+.nav{
+    grid-area: nav;
+    display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 75);
+    padding: 10px;
+    text-align: center;
+}
+.home{
+    width: 30px;
+    height: 30px;
+}
+.menu-des{
+    width: 30px;
+    height: 30px;
+  }
+  .desplegable {
+    overflow: hidden;
+    
+  }
+  
+  /* Dropdown button */
+  .desplegable .listbtn {  
+    border: none;
+    outline: none;
+    color: white;
+    
+    background-color: inherit;
+     /* Important for vertical align on mobile phones */
+     /* Important for vertical align on mobile phones */
+  }
+  /* Add a red background color to navbar links on hover */
+  .navegador a:hover, .desplegable:hover .listbtn {
+    background-color: red;
+  }
+  /* Dropdown content (hidden by default) */
+  .elementos-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .elementos-desplegable a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  /* Add a grey background color to dropdown links on hover */
+  .elementos-desplegable a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .desplegable:hover .elementos-desplegable {
+    display: block;
+  }
+.main{
+    grid-area: main;
+
+  margin: 0 auto;
+
+  
+}
+
+.bar-icon{
+    font-size: 40px;
+    display: inline-block;
+    margin-right:10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.brand{
+    font-size:40px;
+    display: inline-block;
+    font-family:aquire;
+}
+  
+  .cuenta{
+    text-align: center;
+  }
+  .cuenta a{
+    color: white;
+    text-decoration: none;
+  }
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+    background-color:  #52057b;
+    display: block;
+    text-align: center;
+}
+.grid-container{
+    
+    display: grid;
+    gap: 10px;
+grid-template:
+"nav " 50px
+"main" auto
+"footer " 100px;
+}
 
 /* ########################################### */
 /*           Forums.html                       */
@@ -165,51 +283,19 @@ header{
     margin-inline: 10px;
 }
   /* Nav Bar styles */
-  .navegador{
-    display: inline-flex;
-    justify-content: space-between;
-      
-  }
-  .desplegable {
-  
-  
-    overflow: hidden;
-  }
-  .desplegable .listbtn {  
-    border: none;
-    outline: none;
-    color: white;
-    
-    background-color: inherit;
-     /* Important for vertical align on mobile phones */
-     /* Important for vertical align on mobile phones */
-  }
-  .navegador a:hover, .desplegable:hover .listbtn {
-    background-color: red;
-  }
-  .elementos-desplegable {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .elementos-desplegable a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  /* Add a grey background color to dropdown links on hover */
-  .elementos-desplegable a:hover {
-    background-color: #ddd;
-  }
-  .desplegable:hover .elementos-desplegable {
-    display: block;
-  }
+.navbar{
+    display:flex;
+    align-items: center;
+}
+.navigation{
+    background-color:#FF0042;
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right:10px;
+}
 
 .close-icon i{
     font-size:60px;
@@ -217,30 +303,37 @@ header{
     cursor: pointer;
 }
 
+.nav-list{
+    list-style-type:none;
+    overflow: hidden;
+}
 
+.nav-item a{
+    float: right;
+    display:block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    color:#fff;
+}
+
+.nav-item a:hover{
+    background-color: rgba(186, 39, 39, 0.1);
+}
 
 .hide{
     display: none;
 }
 
-.bar-icon{
-    font-size: 60px;
-    display: inline-block;
-    margin-right:10px;
-    color: #fff;
-    cursor: pointer;
-}
+
 
 @font-face {
     font-family:aquire;
     src:url(aquire.otf);
 }
 
-.brand{
-    font-size:60px;
-    display: inline-block;
-    font-family:aquire;
-}
+
 
 /*Navbar for the smartphones*/
 @media screen and (max-width: 460px){
@@ -251,14 +344,14 @@ header{
     .close-icon i{
         font-size:30px;
     }
-    .elementos-desplegable a{
+    
+    .nav-item a{
         float:left;
         display:inline;
         margin-inline: 3px;
         font-size: 10px;
         padding: 5px;
     }
-    
     
     
     .bar-icon{
@@ -271,43 +364,6 @@ header{
 }
 
   /* Search Box styles */
-.search-box{
-    border: solid 1px #52057b;
-    margin-top: 20px;
-    padding: 40px;
-    display:flex;
-    justify-content: center;
-    box-shadow:1px 2px 3px #52057b;
-}
-
-.search-box select{
-    padding: 10px;
-}
-
-.search-box input{
-    padding: 10px;
-}
-
-.search-box button{
-    padding: 10px;
-    background-color:#fff;
-    color:#000000;
-}
-
-.search-box button:hover{
-    background-color: #000000;
-    color: #fff;
-    box-shadow: 1px 2px 3px #fff;
-}
-
-/* search box for smrtphones */
-@media screen and (max-width: 460px){
-    .search-box input, .search-box button, .search-box select{
-        min-width: 300px;
-        margin-top: 5px;
-    }    
-
-}
 
 /* forum info Styling */
 .forum-info{
@@ -321,13 +377,7 @@ header{
 }
 /* Footer Styling */
 
-footer{
-    margin-top: 20px;
-    padding: 20px;
-    background-color:  #52057b;
-    display: block;
-    text-align: center;
-}
+
 
 /* ########################################### */
 /*            posts.html                       */
@@ -506,3 +556,4 @@ footer{
 .comment-area input:hover{
     border: solid 1px #550fd5;
 }
+

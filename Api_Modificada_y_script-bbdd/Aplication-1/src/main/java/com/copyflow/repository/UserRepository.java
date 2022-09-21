@@ -10,6 +10,7 @@ import com.copyflow.entities.User;
 
 public interface UserRepository  extends JpaRepository<User, Long>{
 void save (Optional<User> userToUpdate);
-List<User>findByEmailAndPass(String email, String pass);
+List<User>findByUsernameAndPass(String username, String pass);
+public Optional<User> findUserByUsername(String username);
 
 }

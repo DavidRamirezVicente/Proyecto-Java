@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/buscador.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
-  </head>
-  <body class="grid-container">
-    <nav class="nav">
+    <link rel="stylesheet" href="css/questions.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/thread.css">
+</head>
+<body>
+  <nav class="nav">
+  
       <div>
         <a href="index.html">
           <img
@@ -20,95 +28,46 @@
             alt="Home"
           />
         </a>
+        <div class="brand">Ask4Help</div>
       </div>
-      <div class="desplegable">
-        <button class="listbtn">
-          <img
-            class="menu-des"
-            src="https://cdn-icons-png.flaticon.com/512/59/59660.png"
-            alt=""
-          />
-        </button>
-        <div class="elementos-desplegable">
-          <a href="indexDavid.html">Preguntas</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
-      <a href="https://medlineplus.gov/spanish/healthtopics.html"
-        >Mas informacion</a
-      >
-      <a href="#">Nombre Web</a>
-      <a href="#">About</a>
-      <div class="buscador">
-        <input type="search" placeholder="Buscar . . ." id="inputBusqueda" />
+    
+    
+    
 
-        <a href="#">Crear</a>
-        <a href="login.html">Login</a>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="search" id="search">
-        <table class="search-table" id="searchTable">
-          <thead>
-            <tr>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="ejercicio.html">Ejercicio</a></td>
-            </tr>
-            <tr>
-              <td><a href="Alimentacion.html">Alimentacion</a></td>
-            </tr>
-
-            <tr>
-              <td><a href="#">Noticias</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <article class="main">
-        <h1>
-          Encuentra las mejores respuestas para tus preguntas y ayuda a los
-          demas
-        </h1>
-        <div class="bubble">
-          <div class="bubble-content">
-            <p>hola</p>
-            <div class="cuenta">
-              <a href="crear">Unete a la comunidad</a>
-              <a href="indexDavid.html">Busca contenido</a>
+  </nav>
+  
+    <div class="topic-container">
+        <!--Original thread-->
+        
+        <div class="body">
+          <div class="authors">
+            <div class="username"><a href=""></a></div>
+            <img src="Img/983980.png" />
+          </div>
+          <div class="content">
+            <div class="main">
+                <h4 class="title">
+                    Como combatir la depresion?
+                    </h4>
             </div>
           </div>
         </div>
-        <div class="preguntas">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa
-            pariatur voluptates porro totam quo suscipit quidem quae doloremque,
-            officia optio non vero repudiandae, qui cumque, error odio nisi
-            culpa.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            excepturi assumenda nam similique fuga nisi sunt dignissimos tempora
-            voluptates voluptas, minima tempore autem quo debitis culpa eaque
-            quia tenetur nihil.
-          </p>
+  
+        <div class="main">
+            <div class="header">
+            </div>
+            <textarea></textarea>
+            
+            <button>add comment</button>
+            <div class="comments">
+            </div>
         </div>
-      </article>
-    </div>
-
-    <footer class="footer">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-        exercitationem id nemo. Vel culpa in voluptates alias fugit? Harum,
-        itaque sit! Assumenda natus ab eligendi dolor perferendis obcaecati
-        doloribus ipsum.
-      </p>
-    </footer>
-    <script src="js/buscador.js"></script>
-  </body>
+  
+        <!--Comment Area-->
+      </div>
+   
+    
+    <script src="js/data.js"></script>
+    <script src="js/thread.js"></script>
+</body>
 </html>

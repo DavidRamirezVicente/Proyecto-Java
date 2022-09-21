@@ -9,8 +9,9 @@ public interface UserController {
 	public List<User> getUsers();
 
 	public Optional<User> getUserById(Long id);
+	public Optional<User> getUserByUsername(String username);
 
-	public List<User>findByEmailAndPass(String email, String pass);
+	public List<User>findByUsernameAndPass(String username, String pass);
 	
 	public User addUser(User user);
 

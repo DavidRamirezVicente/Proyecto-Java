@@ -66,9 +66,15 @@ public class UserServiceImpl implements UserService{
 	
 
 	@Override
-	public List<User> findByEmailAndPass(String email, String pass) {
-		List<User> userlogin = userRepository.findByEmailAndPass(email, pass);
+	public List<User> findByUsernameAndPass(String username, String pass) {
+		List<User> userlogin = userRepository.findByUsernameAndPass(username, pass);
 		return userlogin;
+	}
+
+	@Override
+	public Optional<User> findUserByUsername(String username) {
+		Optional<User> iduser = userRepository.findUserByUsername(username);
+		return iduser;
 	}
 
 }

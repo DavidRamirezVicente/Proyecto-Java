@@ -67,9 +67,16 @@ public class UserControllerImpl implements UserController{
 
 	@Override
 	@GetMapping("/users/login")
-	public List<User> findByEmailAndPass(@RequestParam String email,@RequestParam String pass) {
+	public List<User> findByUsernameAndPass(@RequestParam String username,@RequestParam String pass) {
 		// TODO Auto-generated method stub
-		return userService.findByEmailAndPass(email, pass);
+		return userService.findByUsernameAndPass(username, pass);
+	}
+
+	@Override
+	@GetMapping("/users/user/{username}")
+	public Optional<User> getUserByUsername(@PathVariable String username) {
+		// TODO Auto-generated method stub
+		return userService.findUserByUsername(username);
 	}
 
 	
